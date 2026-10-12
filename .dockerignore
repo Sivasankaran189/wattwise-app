@@ -1,0 +1,16 @@
+.git
+.gitignore
+.dockerignore
+target/
+.mvn/
+mvnw
+mvnw.cmd
+.idea/
+*.iml
+.vscode/
+*.log
+docker/
+monitoring/
+scripts/
+README.md
+HELP.md

@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: wattwise-config
+data:
+  tariff-rate: "0.15"
+  off-hours-threshold-watts: "1500.0"
+  excess-ratio-threshold: "1.5"

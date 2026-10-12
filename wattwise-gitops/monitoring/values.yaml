@@ -1,0 +1,28 @@
+# Helm Values for kube-prometheus-stack (Optimized for 8GB Dev Environment)
+prometheus:
+  prometheusSpec:
+    serviceMonitorSelectorNilUsesHelmValues: false
+    retention: 24h
+    resources:
+      requests:
+        memory: 256Mi
+        cpu: 100m
+      limits:
+        memory: 512Mi
+        cpu: 500m
+
+grafana:
+  adminPassword: "AdminPassword123!"
+  resources:
+    requests:
+      memory: 128Mi
+      cpu: 50m
+    limits:
+      memory: 256Mi
+      cpu: 250m
+  service:
+    type: NodePort
+    nodePort: 31000
+
+alertmanager:
+  enabled: false
